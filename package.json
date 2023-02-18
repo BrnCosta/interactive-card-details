@@ -1,4 +1,22 @@
 {
+  "name": "interactive-card-details",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrnCosta/interactive-card-details.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrnCosta/interactive-card-details/issues"
+  },
+  "homepage": "https://github.com/BrnCosta/interactive-card-details#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.6"
   }
