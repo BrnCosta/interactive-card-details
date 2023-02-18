@@ -670,15 +670,15 @@ video {
 }
 
 .bg-card-back {
-  background-image: url('../images/bg-card-back.png');
+  background-image: url('images/bg-card-back.png');
 }
 
 .bg-card-front {
-  background-image: url('../images/bg-card-front.png');
+  background-image: url('images/bg-card-front.png');
 }
 
 .bg-mobile {
-  background-image: url('../images/bg-main-mobile.png');
+  background-image: url('images/bg-main-mobile.png');
 }
 
 .from-rose-400 {
@@ -821,7 +821,7 @@ video {
   }
 
   .sm\:bg-desktop {
-    background-image: url('../images/bg-main-desktop.png');
+    background-image: url('images/bg-main-desktop.png');
   }
 
   .sm\:bg-cover {

@@ -10,10 +10,10 @@ module.exports = {
         'xl': '1390px',
       },
       backgroundImage: {
-        'mobile': "url('../images/bg-main-mobile.png')",
-        'desktop': "url('../images/bg-main-desktop.png')",
-        'card-back': "url('../images/bg-card-back.png')",
-        'card-front': "url('../images/bg-card-front.png')"
+        'mobile': "url('images/bg-main-mobile.png')",
+        'desktop': "url('images/bg-main-desktop.png')",
+        'card-back': "url('images/bg-card-back.png')",
+        'card-front': "url('images/bg-card-front.png')"
       },
       colors: {
         gray: 'hsl(270, 3%, 87%)',
