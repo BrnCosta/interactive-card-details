@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --gray-violet: hsl(270, 3%, 87%);
+        --dark-gray-violet: hsl(279, 6%, 55%);
+        --dark-violet: hsl(278, 68%, 11%);
+    }
+}

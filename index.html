@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./tailwind/styles.css">
+  <script src="./main.js"></script>
+
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <main class="sm:flex sm:h-screen">
+    <div class="p-5 h-60 bg-mobile relative flex items-center justify-end 
+        sm:bg-desktop sm:h-screen sm:flex-col sm:justify-center sm:max-w-[550px] sm:bg-cover
+        md:w-1/2 lg:align-end">
+      <div class="w-[18rem] h-40 mb-2 bg-card-back bg-contain bg-no-repeat flex items-center justify-end
+        lg:w-[447px] lg:h-[245px] lg:bg-cover lg:ml-[35rem]">
+        <h3 id="card-cvc" class="text-[10px] -mt-2 mr-8 lg:text-[14px] lg:-mt-1 lg:mr-14 text-white tracking-widest">000
+        </h3>
+      </div>
+      <div class="absolute left-5 top-1/2 w-[18rem] h-40 bg-card-front bg-contain bg-no-repeat p-5 flex flex-col 
+          sm:static sm:order-first sm:mb-6 
+          lg:w-[447px] lg:h-[245px] lg:bg-cover lg:ml-[27rem]">
+        <img class="w-14 mb-8 lg:w-20 lg:mb-16" alt="Card logo" src="/images/card-logo.svg">
+        <h1 id="card-number" class="grow-1 text-[18px] lg:text-[30px] lg:mb-6 tracking-widest text-white mb-3">0000 0000
+          0000 0000</h1>
+        <div class="flex justify-between">
+          <h3 id="card-name" class="grow-1 text-[10px] lg:text-[14px] tracking-widest text-white">JANE APPLESEED</h3>
+          <h3 id="card-valid" class="grow-1 text-[10px] lg:text-[14px] tracking-widest text-white">00/00</h3>
+        </div>
+      </div>
+    </div>
+    <form id="form"
+      class="mt-20 px-6 mb-20 flex flex-col sm:justify-center md:px-40 lg:pl-64 lg:pr-10 xl:w-1/2 xl:pl-[25rem]"
+      action="#">
+      <div class="flex flex-col mb-2">
+        <label class="text-[12px] tracking-widest text-dark">CARDHOLDER NAME</label>
+        <div id="name-border"
+          class="my-2 px-px rounded-md bg-gray focus-within:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+          <input id="input-name" maxlength="35" autocomplete="off"
+            class="my-px py-2 px-4 w-full rounded-md focus:outline-none placeholder:text-gray" type="text"
+            placeholder="e.g. JANE APPLESEED">
+        </div>
+        <label id="error-name" class="text-[12px] tracking-widest text-red-400"></label>
+      </div>
+      <div class="flex flex-col mb-2">
+        <label class="text-[12px] tracking-widest text-dark">CARD NUMBER</label>
+        <div id="number-border"
+          class="my-2 px-px rounded-md bg-gray focus-within:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+          <input id="input-number" class="my-px py-2 px-4 w-full rounded-md focus:outline-none placeholder:text-gray"
+            type="text" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <label id="error-number" class="text-[12px] tracking-widest text-red-400"></label>
+      </div>
+      <div class="flex">
+        <div class="flex flex-col mr-5 w-1/2 mb-2">
+          <label class="text-[12px] tracking-widest text-dark">EXP. DATE (MM/YY)</label>
+          <div class="flex">
+            <div id="month-border"
+              class="w-1/2 my-2 mr-2 px-px rounded-md bg-gray focus-within:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+              <input id="input-month" maxlength="2" autocomplete="off"
+                class="my-px py-2 px-4 w-full rounded-md focus:outline-none placeholder:text-gray" type="text"
+                placeholder="MM">
+            </div>
+            <div id="year-border"
+              class="w-1/2 my-2 px-px rounded-md bg-gray focus-within:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+              <input id="input-year" maxlength="2" autocomplete="off"
+                class="my-px py-2 px-4 w-full rounded-md focus:outline-none placeholder:text-gray" type="text"
+                placeholder="YY">
+            </div>
+          </div>
+          <label id="error-valid" class="text-[12px] tracking-widest text-red-400"></label>
+        </div>
+        <div class="flex flex-col w-1/2 mb-4">
+          <label class="text-[12px] tracking-widest text-dark">CVC</label>
+          <div id="cvc-border"
+            class="my-2 px-px rounded-md bg-gray focus-within:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+            <input id="input-cvc" maxlength="3" autocomplete="off"
+              class="my-px py-2 px-4 w-full rounded-md focus:outline-none placeholder:text-gray" type="text"
+              placeholder="e.g. 123">
+          </div>
+          <label id="error-cvc" class="text-[12px] tracking-widest text-red-400"></label>
+        </div>
+      </div>
+      <button id="btn-confirm" class="bg-dark text-white w-full h-14 rounded-md">Confirm</button>
+    </form>
+    <div id="completed"
+      class="mt-20 px-6 mb-20 flex flex-col justify-center items-center md:px-40 lg:pl-64 lg:pr-10 xl:w-1/2 xl:pl-[25rem] hidden">
+      <img src="images/icon-complete.svg" alt="Completed" class="w-18 mb-12" />
+      <h1 class="text-dark text-[24px] tracking-widest mb-3">THANK YOU</h1>
+      <h3 class="text-violet text-[18px] tracking-widest mb-12">We've added your card details</h3>
+      <button id="btn-continue" class="bg-dark text-white w-full h-14 rounded-md">Continue</button>
+    </div>
+  </main>
+</body>
+
+</html>
